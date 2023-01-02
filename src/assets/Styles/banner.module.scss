@@ -1,0 +1,56 @@
+@import "./variables.scss";
+
+
+.banner {
+    width: 100%;
+    max-width: $max-width-desktop;
+    height: 223px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+
+    .bannerImg {
+        @include coverDiv;
+        display: block;
+        z-index: 150;
+        object-fit: cover;
+    }
+
+    .overlay {
+        @include coverDiv;
+        z-index: 151;
+        background: #000;
+        opacity: 0.25;
+        contain: content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+
+    }
+
+    h3 {
+        width: 90%;
+        position: absolute;
+        font-size: 48px;
+        z-index: 152;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .homeBanner {
+        height: 111px;
+        h3 {
+            text-align: left;
+            font-size: 24px;
+            left: 30%;
+            width: 50%;
+        }
+    }
+    
+}

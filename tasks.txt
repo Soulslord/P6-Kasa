@@ -1,0 +1,7 @@
+
+
+
+- Création du header/footer en priorité;
+- Mise en place du CSS (relire le guide des étapes clés pour les recommandations);
+- Création des pages ;
+- Création des liens vers les pages ;

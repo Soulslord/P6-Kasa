@@ -1,0 +1,10 @@
+
+
+$main-color: #ff6060;
+$max-width-desktop: 1240px;
+
+@mixin coverDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

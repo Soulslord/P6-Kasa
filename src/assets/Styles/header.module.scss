@@ -1,0 +1,35 @@
+
+@import './variables.scss'; 
+
+
+.header {
+  border: 1px solid orangered;
+  width: 90%;
+  max-width: $max-width-desktop;
+  background: #fff;
+  color: $main-color;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  img {
+    @media screen and (max-width: 800px) {
+      width: 34%;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    min-width: 200px;
+    span {
+      a {
+        color: #ff6060;
+        text-decoration: none;
+      }
+    }
+  }
+}
