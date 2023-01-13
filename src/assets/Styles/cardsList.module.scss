@@ -1,0 +1,41 @@
+
+@import './variables.scss'; 
+
+
+.cardsList {
+    width: 100%;
+    min-height: 500px;
+    max-width: $max-width-desktop;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $max-width-mobile) {
+        background: blueviolet;
+    }
+}
+
+.card {
+    background: pink;
+    color: #fff;
+    width: 345px;
+    aspect-ratio: 1/1;
+    margin: 2%;
+    border-radius: 10px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: $max-width-mobile) {
+        aspect-ratio: auto;
+        min-height: 250px;
+        width: 90%;
+    }
+    h3 {
+        position: absolute;
+        width: 80%;
+        left: 5%;
+        bottom: 5%;
+        text-align: left;
+        font-size: 18px;
+    }
+}

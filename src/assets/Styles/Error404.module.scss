@@ -20,4 +20,12 @@
       font-size: 18px;
     }
   }
+  @media screen and (max-width: $max-width-mobile) {
+    h3 {
+      font-size: 96px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+  }
 }

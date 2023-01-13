@@ -6,7 +6,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: red;
+  font-family: $main-font;
+  color: blue;
+  // background: pink;
 }
 
 .App-logo {

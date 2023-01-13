@@ -1,7 +1,11 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 
 $main-color: #ff6060;
 $max-width-desktop: 1240px;
+$max-width-mobile: 800px;
+$main-font: 'Montserrat', sans-serif;
 
 @mixin coverDiv {
     position: absolute;
