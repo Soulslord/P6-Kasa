@@ -6,7 +6,6 @@ import Header from "./assets/Header-footer/Header";
 import Footer from "./assets/Header-footer/Footer";
 
 function App() {
-
   const [stateRoute, setStateRoute] = useState("empty");
 
   const getRoute = (varTest) => {

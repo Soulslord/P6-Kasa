@@ -9,8 +9,8 @@ const CardsList = () => {
     return (
         <div className={styles.cardsList}>
             {
-                data.map(({title, id, cover}) => (
-                    <Card key={id} index={id} title={title} imgSrc={cover} />
+                data.map(({title, id, cover}, index) => (
+                    <Card key={id} index={index + 1} id={id} title={title} imgSrc={cover} />
                 ))
             }
         </div>
