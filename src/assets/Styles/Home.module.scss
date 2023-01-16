@@ -4,7 +4,6 @@
 
 
 .home {
-    width: 90%;
-    max-width: $max-width-desktop;
+    @include widthGeneral;
     color: $main-color;
 }

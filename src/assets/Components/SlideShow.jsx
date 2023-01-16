@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Carrousel from "./Carrousel";
-
+import styles from "../Styles/slideShow.module.scss";
+import redStar from "../Images/Logos/star-red.svg";
+import greyStar from "../Images/Logos/star-grey.svg";
 
 
 const SlideShow = ({ index, dataCard, datasListLength }) => {
   let [statePage, setStatePage] = useState(index);
 
   console.log(dataCard);
-  console.log(dataCard.pictures);
 
   useEffect(() => {
     setStatePage(index);
@@ -25,11 +26,46 @@ const SlideShow = ({ index, dataCard, datasListLength }) => {
   //     // setStatePage(statePage + 1 );
   //   };
 
+  const { title, location, tags, host } = dataCard;
+
+  console.log(host);
   return (
     <>
       <h1>Je suis dans {index}</h1>
 
       <Carrousel pictures={dataCard.pictures} />
+      <div className={styles.divDatas}>
+        <div className={styles.firstDiv}>
+          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.locationText}>{location}</p>
+          <div className={styles.allTagsDiv}>
+            {tags.map((tag, index) => (
+              <div className={styles.tagDivs} key={index}>
+                <p>{tag}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.secondDiv}>
+          <div className={styles.hostDiv}>
+            <h2 className={styles.hostName}>{host.name}</h2>
+            <img
+              src={host.picture}
+              alt={`hôte ${host.name}`}
+              className={styles.hostImg}
+            />
+          </div>
+
+          <div className={styles.starsDiv}>
+            <img src={redStar} alt="etoile rouge" />
+            <img src={redStar} alt="etoile rouge" />
+            <img src={redStar} alt="etoile rouge" />
+            <img src={greyStar} alt="etoile grise" />
+            <img src={greyStar} alt="etoile grise" />
+          </div>
+        </div>
+      </div>
 
       {/* <Link
         to={`/card/${index <= 1 ? datasListLength : index - 1}`}
@@ -42,9 +78,6 @@ const SlideShow = ({ index, dataCard, datasListLength }) => {
       >
         Next page
       </Link> */}
-
-
-
     </>
   );
 };
