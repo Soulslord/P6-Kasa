@@ -6,7 +6,6 @@ import CardsList from '../Components/CardsList';
 
 const Home = () => {
 
-
     return (
         <main className={styles.home}>
             <Banner image={HeaderBannerImg} text="Chez vous, partout et ailleurs" bannerType="homeBanner" />

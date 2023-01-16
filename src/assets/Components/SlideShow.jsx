@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Carrousel from "./Carrousel";
 
-const CardDetails = ({ index, title, id, imgCover, tags, dataLength}) => {
+
+
+const SlideShow = ({ index, dataCard, datasListLength }) => {
   let [statePage, setStatePage] = useState(index);
 
+  console.log(dataCard);
+  console.log(dataCard.pictures);
+
   useEffect(() => {
-    setStatePage(index)
-  },[index]);
+    setStatePage(index);
+  }, [index]);
 
   //   const handleClick = () => {
   //     const newCard = statePage + 1;
@@ -18,30 +24,29 @@ const CardDetails = ({ index, title, id, imgCover, tags, dataLength}) => {
   //     //with the state you just set
   //     // setStatePage(statePage + 1 );
   //   };
-  console.log({ index, title, id, imgCover, tags, dataLength});
-
-  console.log(dataLength);
-
-
-
 
   return (
-    <div>
-      <h1>Je suis dans {title}</h1>
+    <>
       <h1>Je suis dans {index}</h1>
-      <Link
-        to={`/card/${index <= 1 ? dataLength : index - 1}`}
+
+      <Carrousel pictures={dataCard.pictures} />
+
+      {/* <Link
+        to={`/card/${index <= 1 ? datasListLength : index - 1}`}
       >
         Previous page
       </Link>
       <h1>{statePage}</h1>
       <Link
-        to={`/card/${index >= dataLength ? 1 : index + 1}`}
+        to={`/card/${index >= datasListLength ? 1 : index + 1}`}
       >
         Next page
-      </Link>
-    </div>
+      </Link> */}
+
+
+
+    </>
   );
 };
 
-export default CardDetails;
+export default SlideShow;
