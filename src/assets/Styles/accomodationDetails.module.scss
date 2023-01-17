@@ -1,23 +1,16 @@
 @import "./variables.scss";
 
-
-
-
-
 .divDatas {
   @include widthGeneral;
-  background: rgba(152, 39, 39, 0.15);
   text-align: left;
   color: $main-color;
   font-weight: 500;
   min-height: 150px;
-  background: rgb(28, 187, 20);
   display: flex;
   justify-content: space-between;
   position: relative;
   .firstDiv {
     width: 75%;
-    background: rgb(81, 33, 33);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -30,7 +23,6 @@
       font-size: 18px;
     }
     .allTagsDiv {
-      // background: blueviolet;
       display: flex;
       flex-wrap: wrap;
       .tagDivs {
@@ -50,10 +42,7 @@
     }
   }
 
-
-
   .secondDiv {
-    background: rgb(16, 53, 217);
     height: 100%;
     width: 25%;
     display: flex;
@@ -62,14 +51,13 @@
     .hostDiv {
       width: 100%;
       display: flex;
-      background: rgb(0, 111, 128);
       justify-content: flex-end;
       align-items: center;
+      margin: 5px 0;
       .hostName {
         width: 100%;
-        margin:  0 10px 0 0;
-        background: red;
-        width : min-content;
+        margin: 0 16px 0 0;
+        width: min-content;
         text-align: right;
         font-size: 18px;
       }
@@ -78,7 +66,6 @@
         width: 64px;
         aspect-ratio: 1/1;
         border-radius: 50%;
-
       }
     }
 
@@ -86,16 +73,13 @@
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      background: grey;
       font-size: 32px;
       position: relative;
       img {
-        margin: 0 5px;
+        margin: 0 5px 0 0;
       }
     }
-
   }
-
 
   //MOBILE
 
@@ -105,10 +89,9 @@
       width: 100%;
       .title {
         font-size: 18px;
-        color: aqua;
       }
       .locationText {
-        font-size: 14px
+        font-size: 14px;
       }
     }
 
@@ -117,6 +100,7 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       .hostDiv {
+        // margin: 0px;
         .hostName {
           font-size: 12px;
         }
@@ -134,14 +118,8 @@
         }
       }
     }
-
-
   }
-};
-
-
-
-
+}
 
 //    CARROUSEL
 .carrousel {
@@ -151,11 +129,10 @@
   flex-wrap: wrap;
   flex-direction: column;
   // align-items: center;
-  background: pink;
   position: relative;
   overflow: hidden;
   border-radius: 25px;
-  margin: 50px 0;
+  margin: 20px 0;
   // transform: translateX(-50%);
   img {
     position: relative;
@@ -196,8 +173,6 @@
 
   .btnLeft {
     left: 5%;
-
-
   }
   .btnRight {
     right: 5%;
@@ -208,3 +183,107 @@
     border-radius: 10px;
   }
 }
+
+/// ------------------------   COLLAPSE DEBUT          --------------------------//
+///
+///
+///
+.collapseDivs {
+  @include widthGeneral;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: $max-width-desktop) {
+    flex-direction: column;
+  }
+}
+
+.collapse {
+  color: $main-color;
+  width: 40%;
+  margin: 20px 0;
+  text-align: left;
+  @media screen and (max-width: $max-width-mobile) {
+    width: 100%;
+  }
+  .head {
+    border-radius: 10px;
+    background: $main-color;
+    padding: 5%;
+    overflow: hidden;
+    @include center;
+    h5 {
+      font-weight: 400;
+      color: #fff;
+      font-size: 18px;
+      width: 94%;
+      // background-color: aqua;
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 1.5em;
+      }
+    }
+  }
+
+  .deployed,
+  .notDeployed {
+    // color: orangered;
+    transition: 1s;
+    border-radius: 10px;
+    background: #f7f7f7;
+    position: relative;
+    overflow: hidden;
+    @include center;
+    flex-direction: column;
+
+    p {
+      display: block;
+      font-size: 18px;
+      width: 94%;
+      // background: aqua;
+    }
+  }
+  .notDeployed {
+    height: 0;
+  }
+  .deployed {
+    height: 240px;
+  }
+}
+
+
+
+.divAbout {
+  max-width: $max-width-desktop;
+  width: 90%;
+  @include center;
+  flex-direction: column;
+  .collapse {
+    width: 80%;
+    padding: 0;
+    .head {
+      h5 {
+        font-size: 24px;
+      }
+    }
+    .deployed,
+    .notDeployed {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    .collapse {
+      width: 100%;
+    }
+  }
+
+
+}
+
+/// ------------------------   COLLAPSE FIN         --------------------------//
+///
+///
+///

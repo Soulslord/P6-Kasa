@@ -5,7 +5,7 @@ import About from "../Pages/About";
 import Home from "../Pages/Home";
 import Idtest from "../Pages/Idtest";
 import { data } from "../Data/Data";
-import SlideShow from "../Components/SlideShow";
+import AccomodationDetails from "../Components/AccomodationDetails";
 
 const MainRoutes = () => {
   console.log(data);
@@ -20,7 +20,7 @@ const MainRoutes = () => {
         <Route
           key={index + 1}
           path={`/card/${index + 1}`}
-          element={<SlideShow index={index + 1} dataCard={dataCard} datasListLength={data.length} />}
+          element={<AccomodationDetails index={index + 1} dataCard={dataCard} datasListLength={data.length} />}
         />
       ))}
 

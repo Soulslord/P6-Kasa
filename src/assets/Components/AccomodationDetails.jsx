@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Carrousel from "./Carrousel";
-import styles from "../Styles/slideShow.module.scss";
+import styles from "../Styles/accomodationDetails.module.scss";
 import redStar from "../Images/Logos/star-red.svg";
 import greyStar from "../Images/Logos/star-grey.svg";
+import arrowBottom from "../Images/Logos/arrow-bottom.svg";
+import Collapse from "./Collapse";
 
-
-const SlideShow = ({ index, dataCard, datasListLength }) => {
+const AccomodationDetails = ({ index, dataCard, datasListLength }) => {
   let [statePage, setStatePage] = useState(index);
 
   console.log(dataCard);
@@ -26,14 +27,13 @@ const SlideShow = ({ index, dataCard, datasListLength }) => {
   //     // setStatePage(statePage + 1 );
   //   };
 
-  const { title, location, tags, host } = dataCard;
+  const { title, location, tags, host, description, equipments } = dataCard;
 
   console.log(host);
   return (
     <>
-      <h1>Je suis dans {index}</h1>
-
       <Carrousel pictures={dataCard.pictures} />
+
       <div className={styles.divDatas}>
         <div className={styles.firstDiv}>
           <h3 className={styles.title}>{title}</h3>
@@ -67,6 +67,11 @@ const SlideShow = ({ index, dataCard, datasListLength }) => {
         </div>
       </div>
 
+      <div className={styles.collapseDivs}>
+        <Collapse title="Description" datas={description} />
+        <Collapse title="Equipements" datas={equipments} />
+      </div>
+
       {/* <Link
         to={`/card/${index <= 1 ? datasListLength : index - 1}`}
       >
@@ -82,4 +87,4 @@ const SlideShow = ({ index, dataCard, datasListLength }) => {
   );
 };
 
-export default SlideShow;
+export default AccomodationDetails;

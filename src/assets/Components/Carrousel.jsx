@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ArrowLeft from "../Images/Logos/Arrow-left.svg";
 import ArrowRight from "../Images/Logos/Arrow-right.svg";
-import styles from "../Styles/slideShow.module.scss";
+import styles from "../Styles/accomodationDetails.module.scss";
 
 const Carrousel = ({ pictures }) => {
   const [carrouselPercent, setCarrouselPercent] = useState(0);

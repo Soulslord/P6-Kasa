@@ -1,10 +1,33 @@
-import React, { Component } from 'react';
-import styles from '../Styles/Elements.module.css'; // Import css modules 
+import React, { useState } from "react";
+import styles from "../Styles/accomodationDetails.module.scss";
+import arrowBottom from "../Images/Logos/arrow-bottom.svg";
 
-class Collapse extends Component {
-  render() {
-    return <div className={styles.collapseTest}>Error Button</div>;
-  }
-}
+const Collapse = ({ datas, title }) => {
+  const [stateDeploy, setStateDeploy] = useState(false);
+  console.log(datas);
+  console.log(typeof datas);
+
+  return (
+    <div className={styles.collapse}>
+      <div onClick={() => setStateDeploy(!stateDeploy)} className={styles.head}>
+        <h5>
+          {title}
+          <img src={arrowBottom} alt="fleche vers le bas" />
+        </h5>
+      </div>
+      <div className={stateDeploy ? styles.deployed : styles.notDeployed}>
+        {typeof datas === "string" ? (
+          <p>{datas}</p>
+        ) : (
+          datas.map((el, index) => (
+            <p key={index} style={{ lineHeight: "1.5em" }}>
+              {el}
+            </p>
+          ))
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default Collapse;
