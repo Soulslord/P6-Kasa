@@ -3,10 +3,9 @@ import ArrowLeft from "../Images/Logos/Arrow-left.svg";
 import ArrowRight from "../Images/Logos/Arrow-right.svg";
 import styles from "../Styles/accomodationDetails.module.scss";
 
-const Carrousel = ({ pictures }) => {
+const SlideShow = ({ pictures }) => {
   const [carrouselPercent, setCarrouselPercent] = useState(0);
   console.log(pictures.length);
-
 
   console.log(carrouselPercent);
 
@@ -21,8 +20,36 @@ const Carrousel = ({ pictures }) => {
         />
       ))}
 
-      {/* <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg"/> */}
-      <button
+      {pictures.length > 1 ? (
+        <>
+          <button
+            onClick={() =>
+              setCarrouselPercent(
+                carrouselPercent <= 0
+                  ? pictures.length - 1
+                  : carrouselPercent - 1
+              )
+            }
+            className={styles.btnLeft}
+          >
+            <img src={ArrowLeft} alt="arrow-left" />
+          </button>
+          <button
+            onClick={() =>
+              setCarrouselPercent(
+                carrouselPercent >= pictures.length - 1
+                  ? 0
+                  : carrouselPercent + 1
+              )
+            }
+            className={styles.btnRight}
+          >
+            <img src={ArrowRight} alt="arrow-right" />
+          </button>
+        </>
+      ) : null}
+
+      {/* <button
         onClick={() => setCarrouselPercent(carrouselPercent <= 0 ? pictures.length - 1 : carrouselPercent - 1)}
         className={styles.btnLeft}
       >
@@ -32,10 +59,11 @@ const Carrousel = ({ pictures }) => {
         onClick={() => setCarrouselPercent(carrouselPercent >= pictures.length - 1 ? 0 : carrouselPercent + 1)}
         className={styles.btnRight}
       >
+
         <img src={ArrowRight} alt="arrow-right" />
-      </button>
+      </button> */}
     </div>
   );
 };
 
-export default Carrousel;
+export default SlideShow;

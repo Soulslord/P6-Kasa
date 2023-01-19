@@ -198,6 +198,7 @@
 }
 
 .collapse {
+  $collapseTransition: 0.5s;
   color: $main-color;
   width: 40%;
   margin: 20px 0;
@@ -221,14 +222,14 @@
       justify-content: space-between;
       img {
         width: 1.5em;
+        transition: $collapseTransition;
       }
     }
   }
 
   .deployed,
   .notDeployed {
-    // color: orangered;
-    transition: 1s;
+    transition: $collapseTransition;
     border-radius: 10px;
     background: #f7f7f7;
     position: relative;
@@ -240,7 +241,6 @@
       display: block;
       font-size: 18px;
       width: 94%;
-      // background: aqua;
     }
   }
   .notDeployed {

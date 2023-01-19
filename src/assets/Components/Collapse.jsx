@@ -7,12 +7,14 @@ const Collapse = ({ datas, title }) => {
   console.log(datas);
   console.log(typeof datas);
 
+  console.log(stateDeploy);
+
   return (
     <div className={styles.collapse}>
       <div onClick={() => setStateDeploy(!stateDeploy)} className={styles.head}>
         <h5>
           {title}
-          <img src={arrowBottom} alt="fleche vers le bas" />
+          <img src={arrowBottom} alt="fleche directionelle" style={stateDeploy ? {rotate: "180deg"}: null}/>
         </h5>
       </div>
       <div className={stateDeploy ? styles.deployed : styles.notDeployed}>

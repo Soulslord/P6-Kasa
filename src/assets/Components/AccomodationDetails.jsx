@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Carrousel from "./Carrousel";
+import SlideShow from "./SlideShow";
 import styles from "../Styles/accomodationDetails.module.scss";
 import redStar from "../Images/Logos/star-red.svg";
 import greyStar from "../Images/Logos/star-grey.svg";
 import arrowBottom from "../Images/Logos/arrow-bottom.svg";
 import Collapse from "./Collapse";
 
-const AccomodationDetails = ({ index, dataCard, datasListLength }) => {
+const AccomodationDetails = ({ index, dataCard}) => {
   let [statePage, setStatePage] = useState(index);
 
+
   console.log(dataCard);
+  console.log(dataCard.pictures);
 
   useEffect(() => {
     setStatePage(index);
@@ -27,12 +29,12 @@ const AccomodationDetails = ({ index, dataCard, datasListLength }) => {
   //     // setStatePage(statePage + 1 );
   //   };
 
-  const { title, location, tags, host, description, equipments } = dataCard;
+  const { title, location, tags, host, description, equipments, pictures } = dataCard;
 
   console.log(host);
   return (
     <>
-      <Carrousel pictures={dataCard.pictures} />
+      <SlideShow pictures={pictures} />
 
       <div className={styles.divDatas}>
         <div className={styles.firstDiv}>
