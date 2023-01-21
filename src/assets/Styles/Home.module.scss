@@ -1,9 +1,6 @@
-
-
-@import './variables.scss'; 
-
+@import "./variables.scss";
 
 .home {
-    @include widthGeneral;
-    color: $main-color;
+  @include widthGeneral;
+  color: $main-color;
 }

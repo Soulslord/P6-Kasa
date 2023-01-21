@@ -12,21 +12,6 @@ const AccomodationSheet = ({ index, dataCard }) => {
 
   const ratingsTab = [1, 2, 3, 4, 5];
 
-  useEffect(() => {
-    setStatePage(index);
-  }, [index]);
-
-  //   const handleClick = () => {
-  //     const newCard = statePage + 1;
-  //     index = newCard;
-  //     setStatePage(newCard);
-  //     console.log(statePage);
-  //     // getData(newCount);
-  //     //now you can be sure you call getData
-  //     //with the state you just set
-  //     // setStatePage(statePage + 1 );
-  //   };
-
   const {
     title,
     location,
@@ -38,7 +23,6 @@ const AccomodationSheet = ({ index, dataCard }) => {
     rating,
   } = dataCard;
 
-  console.log(parseInt(rating));
   return (
     <main className={styles.accomodationSheet}>
       <SlideShow pictures={pictures} />

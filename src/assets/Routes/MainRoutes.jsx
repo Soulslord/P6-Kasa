@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import {Routes, Route } from "react-router-dom";
 import Error404 from "../Pages/Error404";
 import About from "../Pages/About";
 import Home from "../Pages/Home";
-import Idtest from "../Pages/Idtest";
 import { data } from "../Data/Data";
 import AccomodationSheet from "../Pages/AccomodationSheet";
 
 const MainRoutes = () => {
-  console.log(data);
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="*" element={<Error404 />} />
-      {/* <Route path="/test" element={<Idtest />} /> */}
-      {data.map((dataCard, index ) => (
+      {data.map((dataCard, index) => (
         <Route
           key={index + 1}
           path={`/card/${index + 1}`}
-          element={<AccomodationSheet index={index + 1} dataCard={dataCard} datasListLength={data.length} />}
+          element={
+            <AccomodationSheet
+              index={index + 1}
+              dataCard={dataCard}
+              datasListLength={data.length}
+            />
+          }
         />
       ))}
-
     </Routes>
   );
 };

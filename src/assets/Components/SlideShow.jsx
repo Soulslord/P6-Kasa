@@ -6,7 +6,6 @@ import styles from "../Styles/accomodationSheet.module.scss";
 const SlideShow = ({ pictures }) => {
   const [carrouselIndex, setcarrouselIndex] = useState(0);
 
-  console.log(carrouselIndex);
   return (
     <div className={styles.carrousel}>
       {pictures.map((picture, index) => (
@@ -23,9 +22,7 @@ const SlideShow = ({ pictures }) => {
           <button
             onClick={() =>
               setcarrouselIndex(
-                carrouselIndex <= 0
-                  ? pictures.length - 1
-                  : carrouselIndex - 1
+                carrouselIndex <= 0 ? pictures.length - 1 : carrouselIndex - 1
               )
             }
             className={styles.btnLeft}
@@ -35,19 +32,18 @@ const SlideShow = ({ pictures }) => {
           <button
             onClick={() =>
               setcarrouselIndex(
-                carrouselIndex >= pictures.length - 1
-                  ? 0
-                  : carrouselIndex + 1
+                carrouselIndex >= pictures.length - 1 ? 0 : carrouselIndex + 1
               )
             }
             className={styles.btnRight}
           >
             <img src={ArrowRight} alt="arrow-right" />
           </button>
-          <h4 className={styles.indexClass}>{carrouselIndex + 1}/{pictures.length}</h4>
+          <h4 className={styles.indexClass}>
+            {carrouselIndex + 1}/{pictures.length}
+          </h4>
         </>
       ) : null}
-
     </div>
   );
 };

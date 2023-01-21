@@ -5,7 +5,6 @@ import arrowBottom from "../Images/Logos/arrow-bottom.svg";
 const Collapse = ({ datas, title }) => {
   const [stateDeploy, setStateDeploy] = useState(false);
 
-
   return (
     <div className={styles.collapse}>
       <div className={styles.head}>

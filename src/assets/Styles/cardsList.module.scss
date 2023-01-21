@@ -1,51 +1,46 @@
-
-@import './variables.scss'; 
-
+@import "./variables.scss";
 
 .cardsList {
-    width: 100%;
-    min-height: 500px;
-    max-width: $max-width-desktop;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    background: #F7F7F7;
-    border-radius: 25px;
-    margin: 40px 0;
+  width: 100%;
+  min-height: 500px;
+  max-width: $max-width-desktop;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background: #f7f7f7;
+  border-radius: 25px;
+  margin: 40px 0;
 
-    @media screen and (max-width: $max-width-mobile) {
-        // background: blueviolet;
-        background: none;
-    }
+  @media screen and (max-width: $max-width-mobile) {
+    background: none;
+  }
 }
 
 .card {
-    background: pink;
-    color: #fff;
-    width: 345px;
-    aspect-ratio: 1/1;
-    margin: 2%;
-    border-radius: 10px;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: pink;
+  color: #fff;
+  width: 345px;
+  aspect-ratio: 1/1;
+  margin: 2%;
+  border-radius: 10px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    h3 {
-        position: absolute;
-        // background: blueviolet;
-        font-weight: 500;
-        width: 50%;
-        left: 5%;
-        bottom: 5%;
-        text-align: left;
-        font-size: 18px;
-    }
-    
-    @media screen and (max-width: $max-width-mobile) {
-        aspect-ratio: auto;
-        // min-height: 250px;
-        height: 255px;
-        width: 100%;
-        margin: 2% 0;
-    }
+  h3 {
+    position: absolute;
+    font-weight: 500;
+    width: 50%;
+    left: 5%;
+    bottom: 5%;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    aspect-ratio: auto;
+    height: 255px;
+    width: 100%;
+    margin: 2% 0;
+  }
 }

@@ -1,7 +1,4 @@
-
-
-@import './variables.scss'; 
-
+@import "./variables.scss";
 
 .error404Element {
   color: $main-color;
@@ -12,7 +9,6 @@
   }
   h4 {
     font-size: 36px;
-    // background: red;
     margin: 0px 0 10%;
   }
   a {
@@ -26,7 +22,6 @@
     h3 {
       font-size: 96px;
       margin: 40% 0 2%;
-      // margin: 75px 0 25px;
     }
     h4 {
       font-size: 18px;

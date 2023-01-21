@@ -1,11 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import styles from "../Styles/banner.module.scss";
 
-class Banner extends Component {
-  render() {
-    const { image, text, descriptionImg, bannerType } = this.props;
-    console.log(bannerType);
-    return (
+const Banner = ({ image, text, descriptionImg, bannerType }) => {
+  return (
       <div
         className={`${styles.banner} ${
           bannerType === "homeBanner" ? styles.homeBanner : ""
@@ -15,8 +12,7 @@ class Banner extends Component {
         <div className={styles.overlay}></div>
         <h3>{text}</h3>
       </div>
-    );
-  }
-}
+  );
+};
 
 export default Banner;

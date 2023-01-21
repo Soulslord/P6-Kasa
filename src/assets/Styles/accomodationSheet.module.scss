@@ -1,16 +1,10 @@
 @import "./variables.scss";
 
-
-
-
-
 .accomodationSheet {
-  // @include widthGeneral;
   width: 100%;
   @include center;
   flex-direction: column;
 }
-
 
 .divDatas {
   @include widthGeneral;
@@ -21,7 +15,6 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  // background: #000;
   .firstDiv {
     width: 75%;
     display: flex;
@@ -39,8 +32,6 @@
       font-size: 18px;
     }
     .allTagsDiv {
-      // background: orangered;
-
       height: auto;
       width: 100%;
       display: flex;
@@ -64,13 +55,11 @@
   }
 
   .secondDiv {
-    // height: 100%;
     width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    // background: green;
     min-height: 75px;
 
     .hostDiv {
@@ -94,13 +83,11 @@
     }
 
     .starsDiv {
-      // background: orangered;
       width: 100%;
       display: flex;
       justify-content: flex-end;
       font-size: 32px;
       position: relative;
-      // margin: 0 0 10px 0;
       img {
         margin: 0 5px 0 0;
         p {
@@ -114,9 +101,7 @@
 
   @media screen and (max-width: $max-width-mobile) {
     flex-direction: column;
-    // height: 200px;
     .firstDiv {
-      // background: pink;
       width: 100%;
       .title {
         font-size: 18px;
@@ -137,12 +122,10 @@
 
     .secondDiv {
       height: 50px;
-      // background: blue;
       width: 100%;
       flex-direction: row-reverse;
       justify-content: space-between;
       .hostDiv {
-        // margin: 0px;
         .hostName {
           font-size: 12px;
         }
@@ -163,7 +146,7 @@
   }
 }
 
-//                FIN DIV DATAS           --------------------   ////////////////////////
+/////////////                         FIN DIV DATAS                         ////////
 
 //    CARROUSEL
 .carrousel {
@@ -216,14 +199,12 @@
   .indexClass {
     position: absolute;
     z-index: 50;
-    // background: blue;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 18px;
   }
-  
 
   .btnLeft {
     left: 5%;
@@ -239,10 +220,6 @@
 }
 
 /// ------------------------   COLLAPSE DEBUT          --------------------------//
-///
-///
-///
-///
 
 .collapseDivs {
   @include widthGeneral;
@@ -261,7 +238,6 @@
   $collapseTransition: 0.5s;
   color: $main-color;
   width: 46%;
-  // height: 50px;
   margin: 20px 0;
   text-align: left;
   overflow: hidden;
@@ -269,7 +245,6 @@
   .head {
     border-radius: 10px;
     background: $main-color;
-    // padding: 5%;
     height: 52px;
     overflow: hidden;
     @include center;
@@ -278,7 +253,6 @@
       color: #fff;
       font-size: 18px;
       width: 92%;
-      // background-color: aqua;
       display: flex;
       justify-content: space-between;
       img {
@@ -307,21 +281,17 @@
     }
   }
   .notDeployed {
-    // transform: translateY(-40%);
     height: 0px;
     transform-origin: top;
   }
   .deployed {
     height: 250px;
-    // height: auto;
-    // padding: 20% 0;
   }
 
-  @media screen and (max-width: $max-width-tablet){
+  @media screen and (max-width: $max-width-tablet) {
     width: 100%;
   }
   @media screen and (max-width: $max-width-mobile) {
-    // width: 100%;
     .head {
       height: 30px;
       border-radius: 5px;
@@ -347,9 +317,11 @@
 //Collapse dans div about
 
 .divAbout {
+  background: blue;
   max-width: $max-width-desktop;
   width: 90%;
-  @include center;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   .collapse {
     width: 80%;
@@ -383,6 +355,3 @@
 }
 
 /// ------------------------   COLLAPSE FIN         --------------------------//
-///
-///
-///
