@@ -1,22 +1,25 @@
 import React, { useState } from "react";
-import styles from "../Styles/accomodationDetails.module.scss";
+import styles from "../Styles/accomodationSheet.module.scss";
 import arrowBottom from "../Images/Logos/arrow-bottom.svg";
 
 const Collapse = ({ datas, title }) => {
   const [stateDeploy, setStateDeploy] = useState(false);
-  console.log(datas);
-  console.log(typeof datas);
 
-  console.log(stateDeploy);
 
   return (
     <div className={styles.collapse}>
-      <div onClick={() => setStateDeploy(!stateDeploy)} className={styles.head}>
+      <div className={styles.head}>
         <h5>
           {title}
-          <img src={arrowBottom} alt="fleche directionelle" style={stateDeploy ? {rotate: "180deg"}: null}/>
+          <img
+            onClick={() => setStateDeploy(!stateDeploy)}
+            src={arrowBottom}
+            alt="fleche directionelle"
+            style={stateDeploy ? { rotate: "180deg" } : null}
+          />
         </h5>
       </div>
+
       <div className={stateDeploy ? styles.deployed : styles.notDeployed}>
         {typeof datas === "string" ? (
           <p>{datas}</p>

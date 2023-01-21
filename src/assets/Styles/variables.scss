@@ -4,7 +4,8 @@
 
 $main-color: #ff6060;
 $max-width-desktop: 1240px;
-$max-width-mobile: 800px;
+$max-width-tablet: 992px;
+$max-width-mobile: 768px;
 $main-font: 'Montserrat', sans-serif;
 
 @mixin coverDiv {

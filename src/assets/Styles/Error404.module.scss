@@ -7,25 +7,31 @@
   color: $main-color;
   h3 {
     font-size: 288px;
-    margin: 20px 0;
+    margin: 10% 0 2%;
     font-weight: bold;
   }
   h4 {
     font-size: 36px;
+    // background: red;
+    margin: 0px 0 10%;
   }
   a {
     color: $main-color;
     p {
-      margin: 100px 0 50px 0;
+      margin: 50px 0 50px 0;
       font-size: 18px;
     }
   }
   @media screen and (max-width: $max-width-mobile) {
     h3 {
       font-size: 96px;
+      margin: 40% 0 2%;
+      // margin: 75px 0 25px;
     }
     h4 {
       font-size: 18px;
+      width: 55%;
+      margin: 0px auto 150px;
     }
   }
 }

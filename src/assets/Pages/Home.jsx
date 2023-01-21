@@ -9,12 +9,9 @@ const Home = () => {
     return (
         <main className={styles.home}>
             <Banner image={HeaderBannerImg} text="Chez vous, partout et ailleurs" bannerType="homeBanner" />
-            <h1>Ma page d'accueil</h1>
 
             <CardsList />
-            <div>
-                <h2>Test accueil</h2>
-            </div>
+
         </main>
     );
 };

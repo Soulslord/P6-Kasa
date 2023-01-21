@@ -22,7 +22,7 @@ const Header = () => {
           </Link>
         </span>
         <span>
-          <Link to="/about" style={newRoute === "/about" ? {textDecoration: "underline"} : null}>A propos</Link>
+          <Link to="/about" style={newRoute === "/about" ? {textDecoration: "underline"} : null}>A Propos</Link>
         </span>
       </h2>
     </header>

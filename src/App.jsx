@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
 
-      <MainRoutes testProps="text test" funcRouteProps={getRoute} />
+      <MainRoutes testProps="text test" funcRouteProps={getRoute} className="test-grow" />
 
       <Footer />
     </div>

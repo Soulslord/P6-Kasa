@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import ArrowLeft from "../Images/Logos/Arrow-left.svg";
 import ArrowRight from "../Images/Logos/Arrow-right.svg";
-import styles from "../Styles/accomodationDetails.module.scss";
+import styles from "../Styles/accomodationSheet.module.scss";
 
 const SlideShow = ({ pictures }) => {
-  const [carrouselPercent, setCarrouselPercent] = useState(0);
-  console.log(pictures.length);
+  const [carrouselIndex, setcarrouselIndex] = useState(0);
 
-  console.log(carrouselPercent);
-
+  console.log(carrouselIndex);
   return (
     <div className={styles.carrousel}>
       {pictures.map((picture, index) => (
@@ -16,7 +14,7 @@ const SlideShow = ({ pictures }) => {
           key={index}
           src={picture}
           alt={`img ${index}`}
-          style={{ transform: `translateX(-${carrouselPercent * 100}%)` }}
+          style={{ transform: `translateX(-${carrouselIndex * 100}%)` }}
         />
       ))}
 
@@ -24,10 +22,10 @@ const SlideShow = ({ pictures }) => {
         <>
           <button
             onClick={() =>
-              setCarrouselPercent(
-                carrouselPercent <= 0
+              setcarrouselIndex(
+                carrouselIndex <= 0
                   ? pictures.length - 1
-                  : carrouselPercent - 1
+                  : carrouselIndex - 1
               )
             }
             className={styles.btnLeft}
@@ -36,32 +34,20 @@ const SlideShow = ({ pictures }) => {
           </button>
           <button
             onClick={() =>
-              setCarrouselPercent(
-                carrouselPercent >= pictures.length - 1
+              setcarrouselIndex(
+                carrouselIndex >= pictures.length - 1
                   ? 0
-                  : carrouselPercent + 1
+                  : carrouselIndex + 1
               )
             }
             className={styles.btnRight}
           >
             <img src={ArrowRight} alt="arrow-right" />
           </button>
+          <h4 className={styles.indexClass}>{carrouselIndex + 1}/{pictures.length}</h4>
         </>
       ) : null}
 
-      {/* <button
-        onClick={() => setCarrouselPercent(carrouselPercent <= 0 ? pictures.length - 1 : carrouselPercent - 1)}
-        className={styles.btnLeft}
-      >
-        <img src={ArrowLeft} alt="arrow-left" />
-      </button>
-      <button
-        onClick={() => setCarrouselPercent(carrouselPercent >= pictures.length - 1 ? 0 : carrouselPercent + 1)}
-        className={styles.btnRight}
-      >
-
-        <img src={ArrowRight} alt="arrow-right" />
-      </button> */}
     </div>
   );
 };

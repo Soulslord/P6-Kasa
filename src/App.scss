@@ -7,8 +7,11 @@
   flex-direction: column;
   align-items: center;
   font-family: $main-font;
-  // color: blue;
-  // background: pink;
+  height: 100vh;
+}
+
+.App > main {
+  flex-grow: 1;
 }
 
 .App-logo {

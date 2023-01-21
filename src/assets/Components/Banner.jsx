@@ -7,7 +7,9 @@ class Banner extends Component {
     console.log(bannerType);
     return (
       <div
-        className={`${styles.banner} ${bannerType === "homeBanner" ? styles.homeBanner : ""}`}
+        className={`${styles.banner} ${
+          bannerType === "homeBanner" ? styles.homeBanner : ""
+        }`}
       >
         <img src={image} className={styles.bannerImg} alt={descriptionImg} />
         <div className={styles.overlay}></div>

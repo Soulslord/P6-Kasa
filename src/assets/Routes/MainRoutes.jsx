@@ -5,7 +5,7 @@ import About from "../Pages/About";
 import Home from "../Pages/Home";
 import Idtest from "../Pages/Idtest";
 import { data } from "../Data/Data";
-import AccomodationDetails from "../Components/AccomodationDetails";
+import AccomodationSheet from "../Pages/AccomodationSheet";
 
 const MainRoutes = () => {
   console.log(data);
@@ -15,12 +15,12 @@ const MainRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="*" element={<Error404 />} />
-      <Route path="/test" element={<Idtest />} />
+      {/* <Route path="/test" element={<Idtest />} /> */}
       {data.map((dataCard, index ) => (
         <Route
           key={index + 1}
           path={`/card/${index + 1}`}
-          element={<AccomodationDetails index={index + 1} dataCard={dataCard} datasListLength={data.length} />}
+          element={<AccomodationSheet index={index + 1} dataCard={dataCard} datasListLength={data.length} />}
         />
       ))}
 

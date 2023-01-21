@@ -1,7 +1,23 @@
 
 
 
-- Création du header/footer en priorité;
-- Mise en place du CSS (relire le guide des étapes clés pour les recommandations);
-- Création des pages ;
-- Création des liens vers les pages ;
+- Création du header/footer en priorité; ok
+- Mise en place du CSS (relire le guide des étapes clés pour les recommandations); ok
+- Création des pages ; ok
+- Création des liens vers les pages ; ok
+
+
+- Ajout de l'index de l'image affiché dans le carrousel;
+- MAJ a propos pour taille des img;
+
+Validation des pages:
+
+
+- Home;✅
+- About;
+- Fiche logement;✅
+- Header;✅
+- Footer;✅
+- Error404;✅
+- Collapse;✅
+- ;✅
