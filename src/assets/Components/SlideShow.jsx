@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ArrowLeft from "../Images/Logos/Arrow-left.svg";
 import ArrowRight from "../Images/Logos/Arrow-right.svg";
 import styles from "../Styles/accomodationSheet.module.scss";
@@ -7,6 +7,7 @@ const SlideShow = ({ pictures }) => {
   const [carrouselIndex, setcarrouselIndex] = useState(0);
 
   return (
+    <>
     <div className={styles.carrousel}>
       {pictures.map((picture, index) => (
         <img
@@ -45,6 +46,8 @@ const SlideShow = ({ pictures }) => {
         </>
       ) : null}
     </div>
+    </>
+
   );
 };
 
