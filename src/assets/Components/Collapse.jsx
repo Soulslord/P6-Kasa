@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import styles from "../Styles/accomodationSheet.module.scss";
+// import styles from "../Styles/accomodationSheet.module.scss";
+import styles from "../Styles/collapse.module.scss";
 import arrowBottom from "../Images/Logos/arrow-bottom.svg";
+import { useLocation } from "react-router-dom";
 
 const Collapse = ({ datas, title }) => {
   const [stateDeploy, setStateDeploy] = useState(false);
 
+  let newRoute2 = useLocation().pathname;
+
   return (
-    <div className={styles.collapse}>
+    <div className={styles.collapse + `${newRoute2 === "/about" ? (" " + styles.collapseAbout) : ""}`}>
       <div className={styles.head}>
         <h5>
           {title}

@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import SlideShow from "../Components/SlideShow";
+import Carousel from "../Components/Carousel";
 import styles from "../Styles/accomodationSheet.module.scss";
 import redStar from "../Images/Logos/star-red.svg";
 import greyStar from "../Images/Logos/star-grey.svg";
-import arrowBottom from "../Images/Logos/arrow-bottom.svg";
+// import arrowBottom from "../Images/Logos/arrow-bottom.svg";
 import Collapse from "../Components/Collapse";
 
 const AccomodationSheet = ({ index, dataCard }) => {
-  let [statePage, setStatePage] = useState(index);
 
   const ratingsTab = [1, 2, 3, 4, 5];
 
@@ -25,7 +23,7 @@ const AccomodationSheet = ({ index, dataCard }) => {
 
   return (
     <main className={styles.accomodationSheet}>
-      <SlideShow pictures={pictures} />
+      <Carousel pictures={pictures} />
 
       <div className={styles.divDatas}>
         <div className={styles.firstDiv}>

@@ -3,9 +3,12 @@ import Banner from "../Components/Banner";
 import FooterBannerImg from "../Images/Img/banner-about.jpg";
 import { useLocation } from "react-router-dom";
 import Collapse from "../Components/Collapse";
-import styles from "../Styles/accomodationSheet.module.scss";
+import styles from "../Styles/divAbout.module.scss";
+
 
 const About = () => {
+
+
   return (
     <main className={`${styles.divAbout}`}>
       <Banner image={FooterBannerImg} descriptionImg="paysage de montagnes" />

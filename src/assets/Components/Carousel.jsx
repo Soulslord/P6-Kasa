@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ArrowLeft from "../Images/Logos/Arrow-left.svg";
 import ArrowRight from "../Images/Logos/Arrow-right.svg";
-import styles from "../Styles/accomodationSheet.module.scss";
+import styles from "../Styles/carousel.module.scss";
 
-const SlideShow = ({ pictures }) => {
-  const [carrouselIndex, setcarrouselIndex] = useState(0);
+const Carousel = ({ pictures }) => {
+  const [carouselIndex, setcarouselIndex] = useState(0);
 
   return (
     <>
@@ -14,7 +14,7 @@ const SlideShow = ({ pictures }) => {
           key={index}
           src={picture}
           alt={`img ${index}`}
-          style={{ transform: `translateX(-${carrouselIndex * 100}%)` }}
+          style={{ transform: `translateX(-${carouselIndex * 100}%)` }}
         />
       ))}
 
@@ -22,8 +22,8 @@ const SlideShow = ({ pictures }) => {
         <>
           <button
             onClick={() =>
-              setcarrouselIndex(
-                carrouselIndex <= 0 ? pictures.length - 1 : carrouselIndex - 1
+              setcarouselIndex(
+                carouselIndex <= 0 ? pictures.length - 1 : carouselIndex - 1
               )
             }
             className={styles.btnLeft}
@@ -32,8 +32,8 @@ const SlideShow = ({ pictures }) => {
           </button>
           <button
             onClick={() =>
-              setcarrouselIndex(
-                carrouselIndex >= pictures.length - 1 ? 0 : carrouselIndex + 1
+              setcarouselIndex(
+                carouselIndex >= pictures.length - 1 ? 0 : carouselIndex + 1
               )
             }
             className={styles.btnRight}
@@ -41,7 +41,7 @@ const SlideShow = ({ pictures }) => {
             <img src={ArrowRight} alt="arrow-right" />
           </button>
           <h4 className={styles.indexClass}>
-            {carrouselIndex + 1}/{pictures.length}
+            {carouselIndex + 1}/{pictures.length}
           </h4>
         </>
       ) : null}
@@ -51,4 +51,4 @@ const SlideShow = ({ pictures }) => {
   );
 };
 
-export default SlideShow;
+export default Carousel;

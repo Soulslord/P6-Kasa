@@ -1,0 +1,11 @@
+
+@import "./variables.scss";
+
+
+.divAbout {
+    max-width: $max-width-desktop;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

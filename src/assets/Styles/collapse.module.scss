@@ -1,0 +1,112 @@
+
+@import "./variables.scss";
+
+.collapse {
+  $collapseTransition: 0.5s;
+  color: $main-color;
+  width: 46%;
+  margin: 20px 0;
+  text-align: left;
+  overflow: hidden;
+
+  .head {
+    border-radius: 10px;
+    background: $main-color;
+    height: 52px;
+    overflow: hidden;
+    @include center;
+    h5 {
+      font-weight: 400;
+      color: #fff;
+      font-size: 18px;
+      width: 92%;
+      display: flex;
+      justify-content: space-between;
+      img {
+        cursor: pointer;
+        width: 1.5em;
+
+        transition: $collapseTransition;
+      }
+    }
+  }
+
+  .deployed,
+  .notDeployed {
+    transition: $collapseTransition;
+    border-radius: 10px;
+    background: #f7f7f7;
+    position: relative;
+    overflow: hidden;
+    @include center;
+    flex-direction: column;
+
+    p {
+      display: block;
+      font-size: 18px;
+      width: 94%;
+    }
+  }
+  .notDeployed {
+    height: 0px;
+    transform-origin: top;
+  }
+  .deployed {
+    height: 250px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    width: 100%;
+  }
+  @media screen and (max-width: $max-width-mobile) {
+    .head {
+      height: 30px;
+      border-radius: 5px;
+      h5 {
+        font-size: 13px;
+      }
+    }
+    .deployed,
+    .notDeployed {
+      border-radius: 5px;
+      p {
+        font-size: 12px;
+      }
+    }
+    .deployed {
+      height: 143px;
+    }
+  }
+}
+
+
+.collapseAbout {
+  width: 80%;
+  .head {
+    h5 {
+      font-size: 24px;
+    }
+  }
+  .deployed,
+  .notDeployed {
+    p {
+      font-size: 24px;
+    }
+  }
+  @media screen and (max-width: $max-width-mobile) {
+    width: 100%;
+    .head {
+      h5 {
+        font-size: 13px;
+      }
+    }
+
+    .deployed,
+    .notDeployed {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
