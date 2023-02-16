@@ -44,7 +44,7 @@ const AccomodationSheet = ({ dataCard }) => {
         <div className={styles.secondDiv}>
           <div className={styles.hostDiv}>
             <h2 className={styles.hostName}>{host.name}</h2>
-            <img
+            <img 
               src={host.picture}
               alt={`hôte ${host.name}`}
               className={styles.hostImg}

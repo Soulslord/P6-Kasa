@@ -6,7 +6,7 @@ import Home from "../Pages/Home";
 import { data } from "../Data/Data";
 import AccomodationSheet from "../Pages/AccomodationSheet";
 
-const MainRoutes = () => {
+const MainRoutes = () => { 
   return (
     <Routes>
       <Route path="/" element={<Home />} />
