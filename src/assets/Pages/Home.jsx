@@ -13,7 +13,7 @@ const Home = () => {
         bannerType="homeBanner"
       />
 
-      <CardsList />
+      <CardsList /> 
     </main>
   );
 };

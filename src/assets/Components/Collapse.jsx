@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import styles from "../Styles/accomodationSheet.module.scss";
 import styles from "../Styles/collapse.module.scss";
 import arrowBottom from "../Images/Logos/arrow-bottom.svg";
 import { useLocation } from "react-router-dom";

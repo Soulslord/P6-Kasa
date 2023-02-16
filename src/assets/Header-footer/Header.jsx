@@ -18,7 +18,7 @@ const Header = () => {
           >
             Accueil
           </Link>
-        </span>
+        </span> 
         <span>
           <Link
             to="/about"

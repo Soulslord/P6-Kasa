@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Carousel from "../Components/Carousel";
 import styles from "../Styles/accomodationSheet.module.scss";
 import redStar from "../Images/Logos/star-red.svg";
 import greyStar from "../Images/Logos/star-grey.svg";
-// import arrowBottom from "../Images/Logos/arrow-bottom.svg";
 import Collapse from "../Components/Collapse";
 
-const AccomodationSheet = ({ index, dataCard }) => {
+const AccomodationSheet = ({ dataCard }) => {
 
   const ratingsTab = [1, 2, 3, 4, 5];
 
@@ -50,7 +49,7 @@ const AccomodationSheet = ({ index, dataCard }) => {
               alt={`hôte ${host.name}`}
               className={styles.hostImg}
             />
-          </div>
+          </div>  
 
           <div className={styles.starsDiv}>
             {ratingsTab.map((elem, indexValue) =>

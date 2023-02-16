@@ -1,5 +1,5 @@
 import React from "react";
-import {Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Error404 from "../Pages/Error404";
 import About from "../Pages/About";
 import Home from "../Pages/Home";
@@ -18,7 +18,6 @@ const MainRoutes = () => {
           path={`/card/${index + 1}`}
           element={
             <AccomodationSheet
-              index={index + 1}
               dataCard={dataCard}
               datasListLength={data.length}
             />

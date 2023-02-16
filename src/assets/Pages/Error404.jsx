@@ -9,9 +9,9 @@ const Error404 = () => {
       <h4>Oups! La page que vous demandez n'existe pas.</h4>
       <Link to="/">
         <p>Retourner sur la page d'accueil</p>
-      </Link>
+      </Link> 
     </main>
   );
 };
 
-export default Error404;
+export default Error404;  

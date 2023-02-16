@@ -93,8 +93,10 @@
       font-size: 24px;
     }
   }
-  @media screen and (max-width: $max-width-mobile) {
+  @media screen and (max-width: $max-width-tablet) {
     width: 100%;
+  }
+  @media screen and (max-width: $max-width-mobile) {
     .head {
       h5 {
         font-size: 13px;

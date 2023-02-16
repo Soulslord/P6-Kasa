@@ -7,7 +7,7 @@ import styles from "../Styles/divAbout.module.scss";
 
 
 const About = () => {
-
+  
 
   return (
     <main className={`${styles.divAbout}`}>
