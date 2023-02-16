@@ -33,7 +33,7 @@ const Collapse = ({ datas, title }) => {
           ))
         )}
       </div>
-    </div>
+    </div> 
   );
 };
 

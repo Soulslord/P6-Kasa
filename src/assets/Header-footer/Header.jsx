@@ -30,7 +30,7 @@ const Header = () => {
           </Link>
         </span>
       </h2>
-    </header>
+    </header> 
   );
 };
 
