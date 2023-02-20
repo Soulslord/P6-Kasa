@@ -6,26 +6,20 @@ import Home from "../Pages/Home";
 import { data } from "../Data/Data";
 import AccomodationSheet from "../Pages/AccomodationSheet";
 
-const MainRoutes = () => { 
+const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="*" element={<Error404 />} />
-      {data.map((dataCard, index) => (
+      <Route path="/accomodation_sheet">
         <Route
-          key={index + 1}
-          path={`/card/${index + 1}`}
-          element={
-            <AccomodationSheet
-              dataCard={dataCard}
-              datasListLength={data.length}
-            />
-          }
+          path=":idLogement"
+          element={<AccomodationSheet dataCard={data} />}
         />
-      ))}
+      </Route>
     </Routes>
   );
 };
- 
+
 export default MainRoutes;
