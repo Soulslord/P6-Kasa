@@ -12,7 +12,6 @@ const Home = () => {
         text="Chez vous, partout et ailleurs"
         bannerType="homeBanner"
       />
-
       <CardsList /> 
     </main>
   );

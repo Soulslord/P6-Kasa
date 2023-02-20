@@ -50,9 +50,10 @@
   .notDeployed {
     height: 0px;
     transform-origin: top;
+    padding: 0 0;
   }
   .deployed {
-    height: 250px;
+    padding: 5% 0;
   }
 
   @media screen and (max-width: $max-width-tablet) {
