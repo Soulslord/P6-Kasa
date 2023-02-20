@@ -1,7 +1,6 @@
 import React from "react";
 import Banner from "../Components/Banner";
 import FooterBannerImg from "../Images/Img/banner-about.jpg";
-import { useLocation } from "react-router-dom";
 import Collapse from "../Components/Collapse";
 import styles from "../Styles/divAbout.module.scss";
 
