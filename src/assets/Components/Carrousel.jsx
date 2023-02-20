@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import ArrowLeft from "../Images/Logos/Arrow-left.svg";
 import ArrowRight from "../Images/Logos/Arrow-right.svg";
 import styles from "../Styles/carousel.module.scss";
 
-const Carousel = ({ pictures }) => {
+const Carrousel = ({ pictures }) => {
   const [carouselIndex, setcarouselIndex] = useState(0);
 
   return (
@@ -51,4 +51,4 @@ const Carousel = ({ pictures }) => {
   );
 };
 
-export default Carousel;
+export default Carrousel;

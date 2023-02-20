@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "../Components/Carousel";
+import Carrousel from "../Components/Carrousel";
 import styles from "../Styles/accomodationSheet.module.scss";
 import redStar from "../Images/Logos/star-red.svg";
 import greyStar from "../Images/Logos/star-grey.svg";
@@ -22,7 +22,7 @@ const AccomodationSheet = ({ dataCard }) => {
 
   return (
     <main className={styles.accomodationSheet}>
-      <Carousel pictures={pictures} />
+      <Carrousel pictures={pictures} />
 
       <div className={styles.divDatas}>
         <div className={styles.firstDiv}>
